@@ -48,7 +48,7 @@ if __name__ == '__main__':
   
    # Print Choices
 
-  print("\033[32m[01] Admin Panel Finder")
-  print("\033[32m[02] Port Scanner")
+  print("\033[32m[01] Port Scanner")
+  print("\033[32m[02] Admin Panel Finder")
   print "\n"
   main()

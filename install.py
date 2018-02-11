@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, time
 
 
 banner = '''\033[37m

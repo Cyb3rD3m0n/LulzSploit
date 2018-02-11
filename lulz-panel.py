@@ -75,7 +75,7 @@ def lulz():
    # Exception
 
          except requests.ConnectionError as (msg):
-            print ("\033[31m[Error] \033[33mcant send requests") + "\033[0m"
+            print "\n"
 
    # Exception
 

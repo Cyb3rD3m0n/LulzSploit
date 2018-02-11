@@ -61,18 +61,21 @@ def lulz():
        time.sleep(1.5)
        print "\033[32m[+] Finding Admin Panel...\033[0m\n"
        print ("\033[32m      Status           :            link        \033[0m\n")
-
-   # Start To Scan And Print Error And Working Admin Panels
-
        for x in range (1, 482):
-         sub_link = f.readline()
-         plurl = "http://"+target+sub_link
-         C = requests.get(plurl)
-         statcode = C.status_code
-         if statcode == 200:
-           print ("\033[32m[+] Admin panel found! : %s%s%s%s\033[0m\033[0m\033[0m\033[0m" % (fg('black'), bg('green'), plurl, attr(0)))
-         else:
-           print ("\033[31m[-] Error Panel        : %s" % (plurl))
+         try:
+           sub_link = f.readline()
+           plurl = "http://"+target+sub_link
+           C = requests.get(plurl)
+           statcode = C.status_code
+           if statcode == 200:
+              print ("\033[32m[+] Admin panel found! : %s%s%s%s\033[0m\033[0m\033[0m\033[0m" % (fg('black'), bg('green'), plurl, attr(0)))
+           else:
+              print ("\033[31m[-] Error Panel        : %s" % (plurl))
+
+   # Exception
+
+         except requests.ConnectionError as (msg):
+            print ("\033[31m[Error] \033[33mcant send requests") + "\033[0m"
 
    # Exception
 

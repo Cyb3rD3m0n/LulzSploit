@@ -1,2 +1,4 @@
-# Lulzsec-PH-Tools : Execute install.py to execute lulzsec.py
+# Lulzsec-PH-Tools : Execute install.py first to install module.
+ 
+ 
  

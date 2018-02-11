@@ -75,7 +75,7 @@ def lulz():
    # Exception
 
          except requests.ConnectionError as (msg):
-            print "\n"
+            print ""
 
    # Exception
 

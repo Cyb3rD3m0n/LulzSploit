@@ -13,6 +13,7 @@ banner = '''\033[37m
 
 ||Lulzsec Tools Installer
 ||created by: cyb3r_d3m0n
+||created in: Philippines
 ||\033[33m\033[4mhttps://github.com/Cyb3eD3m0n\033[0m\n
 '''
 

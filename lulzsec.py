@@ -20,7 +20,16 @@ banner = '''\033[37m
 
 def main():
 
-   # Main Output Start Here
+      os.system("clear")
+      print banner
+  
+   # Print Choices
+
+      print("\033[32m[01] Port Scanner")
+      print("\033[32m[02] Admin Panel Finder")
+      print "\n"
+
+   # Command Choice
 
       lulz = raw_input("  %s%sLulzsec%s > " % (fg('black'), bg(160), attr(0)))
 
@@ -36,6 +45,9 @@ def main():
          panel.start()
          main()
 
+      elif lulz == 'exit':
+         sys.exit()
+
       else:
          print (colors.O+"\n  [Error]"+colors.R+" Command Error\n"+colors.W)
          time.sleep(1.1)
@@ -43,12 +55,4 @@ def main():
 
 
 if __name__ == '__main__':
-  os.system("clear")
-  print banner
-  
-   # Print Choices
-
-  print("\033[32m[01] Port Scanner")
-  print("\033[32m[02] Admin Panel Finder")
-  print "\n"
   main()

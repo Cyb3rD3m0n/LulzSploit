@@ -3,7 +3,7 @@ from colored import fg, bg ,attr
 
    # Main Banner
 
-lulzbanner = '''\033[32m
+lulzbanner = '''\033[31m
    ____  _
   |  _ \(_)_ __   ___  _   _
   | |_) | | '_ \ / _ \| | | |
@@ -21,7 +21,6 @@ lulzbanner = '''\033[32m
 
 ||created by: cyb3r_d3m0n
 ||version 1.0.0
-||
 ||\033[33m\033[4mhttps://github.com/Cyb3eD3m0n\033[0m
 '''
 
@@ -30,18 +29,15 @@ lulzbanner = '''\033[32m
 def lulz():
    try:
 
-   # Opening Sub-Link For Scanning Admin Panels
+      # Getting Target
 
        f = open("lulz.txt","r");
-
-   # Getting Target
-
        print lulzbanner
        target = raw_input("  %s%sTarget Host%s > " % (fg('black'), bg(160), attr(0)))
        if target == 'exit':
          sys.exit()
 
-   # Start To Scan Info
+   # Scanning And Getting Info
 
        print ("\n  %s%sGetting Info...%s\n" % (fg('black'), bg('green'), attr(0)))
        time.sleep(2.5)
@@ -49,9 +45,6 @@ def lulz():
        host = "http://"+url
        r = requests.get(host)
        http = r.status_code
-
-   # Printing The Info
-
        print (" \033[32m [ IP Address    ]\033[0m : %s%s%s%s" % (fg('black'), bg('green'), url, attr(0)))
        print (" \033[32m [ status code   ]\033[0m : %s%s%s%s" % (fg('black'), bg('green'), http, attr(0)))
 

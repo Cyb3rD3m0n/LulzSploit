@@ -1,2 +1,4 @@
 colored
 requests
+socks
+whois

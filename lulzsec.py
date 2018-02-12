@@ -1,5 +1,5 @@
 import os, time, sys
-from tools import colors, scanner, panel, cloudflare, DDoS
+from tools import colors, scanner, panel, cloudflare, DDoS, whs
 from colored import fg, bg, attr
 
 
@@ -33,6 +33,7 @@ def main():
       print("\033[32m[02] Admin Panel Finder")
       print("\033[32m[03] Cloudflare Scanner")
       print("\033[32m[04] Flood Site")
+      print("\033[32m[05] Whois Lookup")
       print "\n"
 
    # Command Choice
@@ -59,6 +60,11 @@ def main():
       elif lulz == '4' or lulz == '04':
          time.sleep(1.1)
          DDoS.start()
+         main()
+
+      elif lulz == '5' or lulz == '05':
+         time.sleep(1.1)
+         whs.start()
          main()
 
       elif lulz == 'exit':

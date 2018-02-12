@@ -1,5 +1,5 @@
 import os, time, sys
-from lulz import colors, scanner, panel
+from lulz import colors, scanner, panel, cloudflare
 from colored import fg, bg, attr
 
 
@@ -17,6 +17,9 @@ banner = '''\033[37m
 ||version 1.0
 ||created in:  Philippines
 ||\033[33m\033[4mhttps://github.com/Cyb3eD3m0n\033[0m\n
+
+\033[32m[?]\033[0m To exit a tool you need to type "main"
+\033[32m[+]\033[0m Wait on updates!
 '''
 
 def main():
@@ -28,6 +31,7 @@ def main():
 
       print("\033[32m[01] Port Scanner")
       print("\033[32m[02] Admin Panel Finder")
+      print("\033[32m[03] Cloudflare Scanner")
       print "\n"
 
    # Command Choice
@@ -44,6 +48,11 @@ def main():
       elif lulz == '2' or lulz == '02':
          time.sleep(1.1)
          panel.start()
+         main()
+
+      elif lulz == '3' or lulz == '03':
+         time.sleep(1.1)
+         cloudflare.scan()
          main()
 
       elif lulz == 'exit':

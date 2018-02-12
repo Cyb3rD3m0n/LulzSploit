@@ -16,7 +16,7 @@ banner = '''\033[37m
 ||created by: cyb3r_d3m0n
 ||version 1.0
 ||created in:  Philippines
-||\033[33m\033[4mhttps://github.com/Cyb3eD3m0n\033[0m\n
+||\033[33m\033[4mhttps://github.com/Cyb3rD3m0n\033[0m\n
 
 \033[32m[?]\033[0m To exit a tool you need to type "main"
 \033[32m[+]\033[0m Wait on updates!

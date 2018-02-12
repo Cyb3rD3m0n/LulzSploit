@@ -31,7 +31,7 @@ time.sleep(2.5)
 print ("\033[32m\n[ cleaning... ]\n\033[0m")
 time.sleep(1.1)
 os.system("chmod +x lulzsec.py")
-os.system("rm -rf lulz.zip")
+os.system("rm -rf tools.zip")
 time.sleep(2.5)
 print ("\033[32m\n[ Done Installing ] : Lulzsec Tools is ready to use\033[0m")
 print "\n"

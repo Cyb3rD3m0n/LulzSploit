@@ -29,6 +29,7 @@ def main():
   
    # Print Choices
 
+      print("      \033[4m\033[1;31mTools\033[0m\n")
       print("\033[32m[01] Port Scanner")
       print("\033[32m[02] Admin Panel Finder")
       print("\033[32m[03] Cloudflare Scanner")

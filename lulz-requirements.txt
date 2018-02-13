@@ -1,4 +1,4 @@
 colored
 requests
 socks
-whois
+python-whois

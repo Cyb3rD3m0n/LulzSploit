@@ -1,40 +1,70 @@
-import os, time, sys
-from tools import colors, scanner, panel, cloudflare, DDoS, whs
+import os, time, sys, subprocess
 from colored import fg, bg, attr
 
+R = "\033[1;31m"   #  RED
+B = "\033[1;34m"   #  BLUE
+C = "\033[1;36m"   #  CYAN
+G = "\033[1;32m"   #  GREEN
+Y = "\033[1;93m"   #  YELLOW
+N = "\033[0m"      #  NORMAL
+B = "\033[1m"      #  BOLD
+P = "\033[35m"     #  PURPLE
+U = "\033[4m"      #  UNDERLINE
 
-banner = '''\033[37m
- _          _
-| |   _   _| |_______  ___  ___
-| |  | | | | |_  / __|/ _ \/ __|
-| |__| |_| | |/ /\__ \  __/ (__
-|_____\__,_|_/___|___/\___|\___|\033[0m
-[##############################]\033[31m
-           T O O L S\033[0m
-[==============================]
+subprocess.call('clear',shell=True)
 
-||created by: cyb3r_d3m0n
-||version 1.0
-||created in:  Philippines
-||\033[33m\033[4mhttps://github.com/Cyb3rD3m0n\033[0m\n
+try:
+  from tools import colors, scanner, panel, cloudflare, DDoS, whs, gbrute, ftpb
+except ImportError as e:
+  time.sleep(1.5)
+  print '''\033[1;93m
+   _          _      ____
+  | |   _   _| |____/ ___|  ___  ___
+  | |  | | | | |_  /\___ \ / _ \/ __|
+  | |__| |_| | |/ /  ___) |  __/ (__
+  |_____\__,_|_/___||____/ \___|\___|\033[1;0m'''
 
-\033[32m[?]\033[0m To exit a tool you need to type "main"
-\033[32m[+]\033[0m Wait on updates!
-'''
+  print ("\n  {}[-]{} Modules Not Found".format(R,N))
+  time.sleep(2.5)
+  print ("  {}[-]{} Execute install.py to unzip and install all modules\n".format(R,N))
+  print ("  {}[-]{} Lulzsec Shutdown!".format(R, N))
+  sys.exit()
+
 
 def main():
 
       os.system("clear")
-      print banner
   
    # Print Choices
 
-      print("      \033[4m\033[1;31mTools\033[0m\n")
-      print("\033[32m[01] Port Scanner")
-      print("\033[32m[02] Admin Panel Finder")
-      print("\033[32m[03] Cloudflare Scanner")
-      print("\033[32m[04] Flood Site")
-      print("\033[32m[05] Whois Lookup")
+      print ''' {Y}
+
+      _          _      ____
+     | |   _   _| |____/ ___|  ___  ___
+     | |  | | | | |_  /\___ \ / _ \/ __|
+     | |__| |_| | |/ /  ___) |  __/ (__
+     |_____\__,_|_/___||____/ \___|\___| {N}
+
+{G}       .;'                   `;,      
+{G}     .;'   ,;'            `;,  `;,   {G}[+]{N} created by: cyb3r_d3m0n
+{G}    .;'  ,;'  ,;'     `;,  `;,  `;,  {G}[+]{N} version : 1.2
+{G}    ::   ::   :   {N}( ){G}   :   ::   ::  {P}[?]{N}{U} https://github.com/Cyb3rD3m0n{N}
+{G}    ':.  ':.  ':. {N}/_\{G} ,:'  ,:'  ,:'  
+{G}     ':.  ':.    {N}/___\{G}    ,:'  ,:'   {Y}[!]{N} Lulzsec Multi tool 
+{G}      ':.       {N}/_____\{G}      ,:'     {Y}[?]{N} Type Main To Exit A Tool
+               {N}/       \           
+
+   {G}[+]{N} Laughing At Your Security Since 2011\n
+   {R}[-]{N} Dont use bruteforce if hydra is not installed
+'''.format(G = G, N = N, P = P, Y = Y, U = U, R = R)
+
+   
+      print("\n      \033[4m\033[1;31mTools\033[0m\n")
+      print("\033[32m[01]\033[93m Port Scanner\033[0m         \033[32m[06]\033[93m Gmail Bruteforce [Hydra]")
+      print("\033[32m[02]\033[93m Admin Panel Finder\033[0m   \033[32m[07]\033[93m FTP Bruteforce   [Hydra]")
+      print("\033[32m[03]\033[93m Cloudflare Scanner\033[0m   ")
+      print("\033[32m[04]\033[93m Flood Site\033[0m           ")
+      print("\033[32m[05]\033[93m Whois Lookup\033[0m         ")
       print "\n"
 
    # Command Choice
@@ -44,31 +74,44 @@ def main():
    # Calling Function
 
       if lulz == '1' or lulz == '01':
-         time.sleep(1.1)
-         scanner.start()
-         main()
+          time.sleep(1.1)
+          scanner.start()
+          main()
 
       elif lulz == '2' or lulz == '02':
-         time.sleep(1.1)
-         panel.start()
-         main()
+          time.sleep(1.1)
+          panel.start()
+          main()
 
       elif lulz == '3' or lulz == '03':
-         time.sleep(1.1)
-         cloudflare.scan()
-         main()
+          time.sleep(1.1)
+          cloudflare.scan()
+          main()
 
       elif lulz == '4' or lulz == '04':
-         time.sleep(1.1)
-         DDoS.start()
-         main()
+          time.sleep(1.1)
+          DDoS.start()
+          main()
 
       elif lulz == '5' or lulz == '05':
-         time.sleep(1.1)
-         whs.start()
-         main()
+          time.sleep(1.1)
+          whs.start()
+          main()
+
+      elif lulz == '6' or lulz == '06':
+          time.sleep(1.1)
+          gbrute.start()
+          main()
+
+      elif lulz == '7' or lulz == '07':
+          time.sleep(1.1)
+          ftpb.start()
+          main()
 
       elif lulz == 'exit':
+         print ("\n"+G+"[+]"+N+"Lulzsec Tools service is done")
+         print (G+"[+]"+N+"Laughing At Your Security Since 2011")
+         print (G+"[+]"+N+"All rights reserved!\n")
          sys.exit()
 
       else:

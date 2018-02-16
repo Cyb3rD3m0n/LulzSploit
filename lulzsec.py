@@ -68,7 +68,7 @@ def main():
 {G}       .;'                   `;,      
 {G}     .;'   ,;'            `;,  `;,   {G}[+]{N} created by: cyb3r_d3m0n
 {G}    .;'  ,;'  ,;'     `;,  `;,  `;,  {G}[+]{N} version : 1.2
-{G}    ::   ::   :   {N}( ){G}   :   ::   ::  {P}[?]{N}{U} https://github.com/Cyb3rD3m0n{N}
+{G}    ::   ::   :   {N}( ){G}   :   ::   ::  {P}[?]{N} {U}https://github.com/Cyb3rD3m0n{N}
 {G}    ':.  ':.  ':. {N}/_\{G} ,:'  ,:'  ,:'  
 {G}     ':.  ':.    {N}/___\{G}    ,:'  ,:'   {Y}[!]{N} Lulzsec Multi tool 
 {G}      ':.       {N}/_____\{G}      ,:'     {Y}[?]{N} Type Main To Exit A Tool
@@ -139,7 +139,7 @@ def main():
           main()
 
       elif lulz == 'exit':
-         print ("\n"+G+"[+]"+N+"Lulzsec Tools service is done")
+         print ("\n"+G+"[+]"+N+"Lulzsploit service is done")
          print (G+"[+]"+N+"Laughing At Your Security Since 2011")
          print (G+"[+]"+N+"All rights reserved!\n")
          sys.exit()

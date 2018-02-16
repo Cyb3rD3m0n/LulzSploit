@@ -14,7 +14,7 @@ U = "\033[4m"      #  UNDERLINE
 subprocess.call('clear',shell=True)
 
 try:
-  from tools import colors, scanner, panel, cloudflare, DDoS, whs, gbrute, ftpb
+  from tools import colors, scanner, panel, cloudflare, DDoS, whs, gbrute, ftpb, Hinst
 except ImportError as e:
   time.sleep(1.5)
   print '''\033[1;93m
@@ -62,7 +62,7 @@ def main():
       print("\n      \033[4m\033[1;31mTools\033[0m\n")
       print("\033[32m[01]\033[93m Port Scanner\033[0m         \033[32m[06]\033[93m Gmail Bruteforce [Hydra]")
       print("\033[32m[02]\033[93m Admin Panel Finder\033[0m   \033[32m[07]\033[93m FTP Bruteforce   [Hydra]")
-      print("\033[32m[03]\033[93m Cloudflare Scanner\033[0m   ")
+      print("\033[32m[03]\033[93m Cloudflare Scanner\033[0m   \033[32m[08]\033[93m Hydra Installer")
       print("\033[32m[04]\033[93m Flood Site\033[0m           ")
       print("\033[32m[05]\033[93m Whois Lookup\033[0m         ")
       print "\n"
@@ -106,6 +106,11 @@ def main():
       elif lulz == '7' or lulz == '07':
           time.sleep(1.1)
           ftpb.start()
+          main()
+
+      elif lulz == '8' or lulz == '08':
+          time.sleep(1.1)
+          Hinst.start()
           main()
 
       elif lulz == 'exit':

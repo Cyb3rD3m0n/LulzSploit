@@ -22,16 +22,25 @@ print ("\033[32m[ Installing... ]\n\033[0m")
 time.sleep(2.5)
 print ("\033[32m\n[ Unzipping Lulz Modules ]\033[0m\n")
 time.sleep(1.5)
+print "=" * 47
+print ""
 os.system("unzip tools.zip")
+print ""
+print "#" * 47
 time.sleep(2.5)
 print ("\033[32m\n[ Installing Lulz Requirements ]\n\033[0m")
 time.sleep(1.1)
+print "=" * 47
+print ""
 os.system("pip2 install -r lulz-requirements.txt")
+print ""
+print "#" * 47
 time.sleep(2.5)
 print ("\033[32m\n[ cleaning... ]\n\033[0m")
 time.sleep(1.1)
 os.system("chmod +x lulzsec.py")
 os.system("rm -rf tools.zip")
+os.system("rm -rf lulz-requirements.txt")
 time.sleep(2.5)
 print ("\033[32m\n[ Done Installing ] : Lulzsec Tools is ready to use\033[0m")
 print "\n"

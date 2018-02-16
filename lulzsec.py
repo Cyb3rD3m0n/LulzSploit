@@ -1,4 +1,4 @@
-import os, time, sys, subprocess
+import os, time, sys, subprocess, platform
 from colored import fg, bg, attr
 
 R = "\033[1;31m"   #  RED
@@ -10,24 +10,43 @@ N = "\033[0m"      #  NORMAL
 B = "\033[1m"      #  BOLD
 P = "\033[35m"     #  PURPLE
 U = "\033[4m"      #  UNDERLINE
+platformS = str(platform.system())
+platformR = str(platform.release())
+
+if str(platform.system()) != "Linux":
+  print '''\033[1;93m
+   _          _      ____        _       _ _                                  
+  | |   _   _| |____/ ___| _ __ | | ___ (_) |_
+  | |  | | | | |_  /\___ \| '_ \| |/ _ \| | __|
+  | |__| |_| | |/ /  ___) | |_) | | (_) | | |_
+  |_____\__,_|_/___||____/| .__/|_|\___/|_|\__|
+                          |_| \033[0m'''
+
+  print ("\n  {}[-]{} you are not using Linux System{}".format(R,Y,N))
+  time.sleep(1.5)
+  print ("  {}[-]{} please run this script on Linux System{}",format(R,Y,N))
+  time.sleep(1.1)
+  print ("  {}[-]{} Lulzsec Shutdown!{}".format(R,Y,N))
+
 
 subprocess.call('clear',shell=True)
 
 try:
-  from tools import colors, scanner, panel, cloudflare, DDoS, whs, gbrute, ftpb, Hinst
+  from tools import colors, scanner, panel, cloudflare, DDoS, whs, gbrute, ftpb, Hinst, payloads
 except ImportError as e:
   time.sleep(1.5)
   print '''\033[1;93m
-   _          _      ____
-  | |   _   _| |____/ ___|  ___  ___
-  | |  | | | | |_  /\___ \ / _ \/ __|
-  | |__| |_| | |/ /  ___) |  __/ (__
-  |_____\__,_|_/___||____/ \___|\___|\033[1;0m'''
+   _          _      ____        _       _ _                                  
+  | |   _   _| |____/ ___| _ __ | | ___ (_) |_
+  | |  | | | | |_  /\___ \| '_ \| |/ _ \| | __|
+  | |__| |_| | |/ /  ___) | |_) | | (_) | | |_
+  |_____\__,_|_/___||____/| .__/|_|\___/|_|\__|
+                          |_| \033[0m'''
 
-  print ("\n  {}[-]{} Modules Not Found".format(R,N))
+  print ("\n  {}[-]{} Modules Not Found{}".format(R,Y,N))
   time.sleep(2.5)
-  print ("  {}[-]{} Execute install.py to unzip and install all modules\n".format(R,N))
-  print ("  {}[-]{} Lulzsec Shutdown!".format(R, N))
+  print ("  {}[-]{} Execute install.py to unzip and install all modules{}\n".format(R,Y,N))
+  print ("  {}[-]{} Lulzsec Shutdown!{}".format(R,Y,N))
   sys.exit()
 
 
@@ -37,13 +56,14 @@ def main():
   
    # Print Choices
 
-      print ''' {Y}
+      print '''{Y}
 
-      _          _      ____
-     | |   _   _| |____/ ___|  ___  ___
-     | |  | | | | |_  /\___ \ / _ \/ __|
-     | |__| |_| | |/ /  ___) |  __/ (__
-     |_____\__,_|_/___||____/ \___|\___| {N}
+    _          _      ____        _       _ _
+   | |   _   _| |____/ ___| _ __ | | ___ (_) |_
+   | |  | | | | |_  /\___ \| '_ \| |/ _ \| | __|
+   | |__| |_| | |/ /  ___) | |_) | | (_) | | |_
+   |_____\__,_|_/___||____/| .__/|_|\___/|_|\__|
+                           |_|{N}
 
 {G}       .;'                   `;,      
 {G}     .;'   ,;'            `;,  `;,   {G}[+]{N} created by: cyb3r_d3m0n
@@ -56,15 +76,15 @@ def main():
 
    {G}[+]{N} Laughing At Your Security Since 2011\n
    {R}[-]{N} Dont use bruteforce if hydra is not installed
-'''.format(G = G, N = N, P = P, Y = Y, U = U, R = R)
+   {R}[-]{N} Dont use payload creator if metasploit is not installed\n
+   {G}[+]{N} Lulzsploit is running on {PS} platform : version {PR}
+'''.format(G = G, N = N, P = P, Y = Y, U = U, R = R, PS = platformS, PR = platformR)
 
-   
-      print("\n      \033[4m\033[1;31mTools\033[0m\n")
-      print("\033[32m[01]\033[93m Port Scanner\033[0m         \033[32m[06]\033[93m Gmail Bruteforce [Hydra]")
-      print("\033[32m[02]\033[93m Admin Panel Finder\033[0m   \033[32m[07]\033[93m FTP Bruteforce   [Hydra]")
-      print("\033[32m[03]\033[93m Cloudflare Scanner\033[0m   \033[32m[08]\033[93m Hydra Installer")
-      print("\033[32m[04]\033[93m Flood Site\033[0m           ")
-      print("\033[32m[05]\033[93m Whois Lookup\033[0m         ")
+      print("   \033[32m[01]\033[93m Port Scanner\033[0m         \033[32m[06]\033[93m Gmail Bruteforce [Hydra]")
+      print("   \033[32m[02]\033[93m Admin Panel Finder\033[0m   \033[32m[07]\033[93m FTP Bruteforce   [Hydra]")
+      print("   \033[32m[03]\033[93m Cloudflare Scanner\033[0m   \033[32m[08]\033[93m Hydra Installer")
+      print("   \033[32m[04]\033[93m Flood Site\033[0m           \033[32m[09]\033[93m payload creator  [msfvenom]")
+      print("   \033[32m[05]\033[93m Whois Lookup\033[0m         ")
       print "\n"
 
    # Command Choice
@@ -111,6 +131,11 @@ def main():
       elif lulz == '8' or lulz == '08':
           time.sleep(1.1)
           Hinst.start()
+          main()
+
+      elif lulz == '9' or lulz == '09':
+          time.sleep(1.1)
+          payloads.start()
           main()
 
       elif lulz == 'exit':

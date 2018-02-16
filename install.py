@@ -36,7 +36,7 @@ print "#" * 47
 time.sleep(2.5)
 print ("\033[32m\n[ cleaning... ]\n\033[0m")
 time.sleep(1.1)
-os.system("chmod +x lulzsec.py")
+os.system("chmod +x lulzsploit.py")
 os.system("rm -rf tools.zip")
 os.system("rm -rf lulz-requirements.txt")
 time.sleep(2.5)

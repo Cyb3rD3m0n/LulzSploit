@@ -10,7 +10,7 @@ W = "\033[0m"      #  NORMAL
 B = "\033[1m"      #  BOLD
 P = "\033[35m"     #  PURPLE
 U = "\033[4m"      #  UNDERLINE
-O = "\033[36m      #  ORANGE
+O = "\033[36m"      #  ORANGE
 
 def Command_exe(msg,cmd):
 	i = "\033[1mSTATUS :[Processing]"

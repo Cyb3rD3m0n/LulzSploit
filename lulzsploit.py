@@ -72,7 +72,7 @@ def main():
 
    {G}[+]{N} Lulzsploit is running on : {PS} : version {PR}
    {G}[+]{N} created by: cyb3r_d3m0n
-   {G}[+]{N} lulzsploit v2.3
+   {G}[+]{N} lulzsploit v3.5
    {Y}[?]{N} Type Main To Exit A Tool
    {P}[?]{N} {U}https://github.com/Cyb3rD3m0n{N}
 
@@ -88,12 +88,6 @@ def main():
       print("   \033[32m[04]\033[93m Flood Site\033[0m           \033[32m[09]\033[93m payload creator  [msfvenom]")
       print("   \033[32m[05]\033[93m Whois Lookup\033[0m         \033[32m[10]\033[93m Connect Tor")
       print "\n"
-      print '''
-    {G}Addon Tools{N}
-    ===========
-
-    {G}[use]  {Y}use addon-tools on tools module{N}
-'''.format(G = G, Y = Y, N = N)
 
    # Command Choice
 
@@ -155,14 +149,6 @@ def main():
          os.system("clear")
          print ("\n"+G+"[+]"+N+"LulzSploit process is done\n")
          sys.exit()
-
-      elif lulz == 'use':
-         print ("\n  \033[1;32m[+] \033[93mMake sure you put the tool in 'LulzSploit/tools/' directory\033[0m\n")
-         user = raw_input("\n  %s%sTool Name%s > " % (fg('black'), bg(160), attr(0)))
-         subprocess.call('cd /', shell=True, stderr=open(os.devnull))
-         subprocess.call('cd LulzSploit/tools', shell=True)
-         subprocess.call('{}'.format(user), shell=True, stderr=open(os.devnull))
-          
 
       else:
          print (colors.O+"\n  [Error]"+colors.R+" Command Error\n"+colors.W)

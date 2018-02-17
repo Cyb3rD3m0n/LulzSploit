@@ -10,6 +10,7 @@ W = "\033[0m"      #  NORMAL
 B = "\033[1m"      #  BOLD
 P = "\033[35m"     #  PURPLE
 U = "\033[4m"      #  UNDERLINE
+O = "\033[36m      #  ORANGE
 
 def Command_exe(msg,cmd):
 	i = "\033[1mSTATUS :[Processing]"
@@ -34,12 +35,12 @@ print '''
 {G} ':.  ':.  ':.  {Y}/_\{G}  ,;'  ,:'  ,:'  {Y}| |__| |_| | |/ /  ___) | |_) | | (_) | | |_{G}
 {G}  ':.  ':.     {Y}/___\{G}     ,:'  ,:'   {Y}|_____\__,_|_/___||____/| .__/|_|\___/|_|\__|{G}
 {G}    ':.       {Y}/_____\{G}        ,:'                            {Y}|_|
-               {Y}/       \{N}'''.format(Y = Y, G = G, N = N)
+             {Y}/       \{N}'''.format(Y = Y, G = G, N = N)
 print ("_________________________________________________
 print ("_________________________________________________| [esf installer]")
 print R + "  __________________________________________|" + W
 print R + " |  [+]" + G + " INSTALLING" + W
-print Command_exe(R + "|  [+]" + G + " Extracting Modules",'unzip tools.zip
+print Command_exe(R + "|  [+]" + G + " Extracting Modules",'unzip tools.zip')
 print Command_exe(R + "|  [+]" + G + " Creating Files\033[0m",'mkdir -p /data/data/com.termux/files/usr/share/LulzSploit')
 print Command_exe(R + "|  [+]" + G + " Copying Files\033[0m",'cp -r * /data/data/com.termux/files/usr/share/LulzSploit')
 print Command_exe(R + "|  [+]" + G + " Creating Shortcuts\033[0m",Shortcuts)

@@ -24,6 +24,9 @@ if str(platform.system()) != "Linux":
 
   print ("\n  {}[-]{} you are not using Linux System{}".format(R,Y,N))
   time.sleep(1.5)
+  print ("{}[-]{} Lulzsploit is running on : {PS} : version {PR}".format(R,N))
+  time.sleep(1.5)
+  print ("{}[-]{} Invaid Platform".format(R,N))
   print ("  {}[-]{} please run this script on Linux System{}",format(R,Y,N))
   time.sleep(1.1)
   print ("  {}[-]{} LulzSploit Shutdown!{}".format(R,Y,N))
@@ -32,7 +35,7 @@ if str(platform.system()) != "Linux":
 subprocess.call('clear',shell=True)
 
 try:
-  from tools import colors, scanner, panel, cloudflare, DDoS, whs, gbrute, ftpb, Hinst, payloads
+  from tools import colors, scanner, panel, cloudflare, DDoS, whs, gbrute, ftpb, Hinst, payloads, tortool
 except ImportError as e:
   time.sleep(1.5)
   print '''\033[1;93m
@@ -51,45 +54,50 @@ except ImportError as e:
 
 
 def main():
+   try:
 
       os.system("clear")
   
    # Print Choices
 
-      print '''{Y}
+      print '''
+{G}      .;'                      `;,    {G}[+]{N} Laughing At Your Security Since 2011
+{G}    .;'  ,;'               `;,  `;,    {Y}_          _      ____        _       _ _{G}
+{G}   .;'  ,;'  ,;'   {Y}_{G}   `;,  `;,  `;,  {Y}| |   _   _| |____/ ___| _ __ | | ___ (_) |_{G}
+{G}   ::   ::   :    {Y}(_){G}    :   ::   ::  {Y}| |  | | | | |_  /\___ \| '_ \| |/ _ \| | __|{G}
+{G}   ':.  ':.  ':.  {Y}/_\{G}  ,;'  ,:'  ,:'  {Y}| |__| |_| | |/ /  ___) | |_) | | (_) | | |_{G}
+{G}    ':.  ':.     {Y}/___\{G}     ,:'  ,:'   {Y}|_____\__,_|_/___||____/| .__/|_|\___/|_|\__|{G}
+{G}      ':.       {Y}/_____\{G}        ,:'                            {Y}|_|
+               {Y}/       \{N}
 
-    _          _      ____        _       _ _
-   | |   _   _| |____/ ___| _ __ | | ___ (_) |_
-   | |  | | | | |_  /\___ \| '_ \| |/ _ \| | __|
-   | |__| |_| | |/ /  ___) | |_) | | (_) | | |_
-   |_____\__,_|_/___||____/| .__/|_|\___/|_|\__|
-                           |_|{N}
+   {G}[+]{N} Lulzsploit is running on : {PS} : version {PR}
+   {G}[+]{N} created by: cyb3r_d3m0n
+   {G}[+]{N} lulzsploit v2.3
+   {Y}[?]{N} Type Main To Exit A Tool
+   {P}[?]{N} {U}https://github.com/Cyb3rD3m0n{N}
 
-{G}       .;'                   `;,      
-{G}     .;'   ,;'            `;,  `;,   {G}[+]{N} created by: cyb3r_d3m0n
-{G}    .;'  ,;'  ,;'     `;,  `;,  `;,  {G}[+]{N} version : 1.2
-{G}    ::   ::   :   {N}( ){G}   :   ::   ::  {P}[?]{N} {U}https://github.com/Cyb3rD3m0n{N}
-{G}    ':.  ':.  ':. {N}/_\{G} ,:'  ,:'  ,:'  
-{G}     ':.  ':.    {N}/___\{G}    ,:'  ,:'   {Y}[!]{N} Lulzsec Multi tool 
-{G}      ':.       {N}/_____\{G}      ,:'     {Y}[?]{N} Type Main To Exit A Tool
-               {N}/       \           
-
-   {G}[+]{N} Laughing At Your Security Since 2011\n
+   {R}Warnings{N}
+   ========
    {R}[-]{N} Dont use bruteforce if hydra is not installed
    {R}[-]{N} Dont use payload creator if metasploit is not installed\n
-   {G}[+]{N} Lulzsploit is running on {PS} platform : version {PR}
 '''.format(G = G, N = N, P = P, Y = Y, U = U, R = R, PS = platformS, PR = platformR)
 
       print("   \033[32m[01]\033[93m Port Scanner\033[0m         \033[32m[06]\033[93m Gmail Bruteforce [Hydra]")
       print("   \033[32m[02]\033[93m Admin Panel Finder\033[0m   \033[32m[07]\033[93m FTP Bruteforce   [Hydra]")
       print("   \033[32m[03]\033[93m Cloudflare Scanner\033[0m   \033[32m[08]\033[93m Hydra Installer")
       print("   \033[32m[04]\033[93m Flood Site\033[0m           \033[32m[09]\033[93m payload creator  [msfvenom]")
-      print("   \033[32m[05]\033[93m Whois Lookup\033[0m         ")
+      print("   \033[32m[05]\033[93m Whois Lookup\033[0m         \033[32m[10]\033[93m Connect Tor")
       print "\n"
+      print '''
+    {G}Addon Tools{N}
+    ===========
+
+    {G}[use]  {Y}use addon-tools on tools module{N}
+'''.format(G = G, Y = Y, N = N)
 
    # Command Choice
 
-      lulz = raw_input("  %s%sLulzsec%s > " % (fg('black'), bg(160), attr(0)))
+      lulz = raw_input("  %s%sLulzSploit%s > " % (fg('black'), bg(160), attr(0)))
 
    # Calling Function
 
@@ -138,17 +146,39 @@ def main():
           payloads.start()
           main()
 
+      elif lulz == '10':
+          time.sleep(1.1)
+          tortool.start()
+          main()
+
       elif lulz == 'exit':
-         print ("\n"+G+"[+]"+N+"Lulzsploit service is done")
-         print (G+"[+]"+N+"Laughing At Your Security Since 2011")
-         print (G+"[+]"+N+"All rights reserved!\n")
+         os.system("clear")
+         print ("\n"+G+"[+]"+N+"LulzSploit process is done\n")
          sys.exit()
+
+      elif lulz == 'use':
+         print ("\n  \033[1;32m[+] \033[93mMake sure you put the tool in 'LulzSploit/tools/' directory\033[0m\n")
+         user = raw_input("\n  %s%sTool Name%s > " % (fg('black'), bg(160), attr(0)))
+         subprocess.call('cd /', shell=True, stderr=open(os.devnull))
+         subprocess.call('cd LulzSploit/tools', shell=True)
+         subprocess.call('{}'.format(user), shell=True, stderr=open(os.devnull))
+          
 
       else:
          print (colors.O+"\n  [Error]"+colors.R+" Command Error\n"+colors.W)
          time.sleep(1.1)
          main()
 
+   except KeyboardInterrupt:
+      try:
+        print ("\n   \033[1;93m[-] \033[1;0mStop keyboard interrupting")
+        time.sleep(1.5)
+        main()
+      except KeyboardInterrupt:
+        os.system("clear")
+        os.system("figlet 'STOP'")
+        time.sleep(1.5)
+        main()
 
 if __name__ == '__main__':
   main()

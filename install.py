@@ -24,7 +24,7 @@ def Command_exe(msg,cmd):
 
 Shortcuts ="cp -r /data/data/com.termux/files/home/LulzSploit/tools/lsfconsole /data/data/com.termux/files/usr/bin/lsfconsole "
 Files     ="cp -r * /data/data/com.termux/files/home/LulzSploit /data/data/com.termux/files/usr/local/share/LulzSploit "
-Homedir   ="cd /data/data/com.termux/files/home
+Homedir   ="cd /data/data/com.termux/files/home"
 
 print '''
 {G}    .;'                      `;,    {G}[+]{N} Laughing At Your Security Since 2011

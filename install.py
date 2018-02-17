@@ -1,45 +1,52 @@
-import os, sys, time
+import os, time, subprocess
+from sys import stdout
 
+R = "\033[1;31m"   #  RED
+B = "\033[1;34m"   #  BLUE
+C = "\033[1;36m"   #  CYAN
+G = "\033[1;32m"   #  GREEN
+Y = "\033[1;93m"   #  YELLOW
+W = "\033[0m"      #  NORMAL
+B = "\033[1m"      #  BOLD
+P = "\033[35m"     #  PURPLE
+U = "\033[4m"      #  UNDERLINE
 
-banner = '''\033[37m
- _          _      ____        _       _ _
-| |   _   _| |____/ ___| _ __ | | ___ (_) |_
-| |  | | | | |_  /\___ \| '_ \| |/ _ \| | __|
-| |__| |_| | |/ /  ___) | |_) | | (_) | | |_
-|_____\__,_|_/___||____/| .__/|_|\___/|_|\__|
-                        |_|
+def Command_exe(msg,cmd):
+	i = "\033[1mSTATUS :[Processing]"
+	stdout.write(" " + msg + " %s" % i)
+	stdout.flush()
+	if subprocess.call(cmd+' >/dev/null 2>&1', shell=True)==0:
+		i = "[\033[1mOK"+W+"]"
+	else:
+		i = "[\033[1mERROR"+W+"] :["+O+"WARNING"+W+"]"
+		
+	stdout.write("\r " + msg +" STATUS:%s" % i)
 
-||LulzSploit Tools Installer
-||created by: cyb3r_d3m0n
-||created in: Philippines
-||\033[33m\033[4mhttps://github.com/Cyb3eD3m0n\033[0m\n
-'''
+Shortcuts ="cp -r /data/data/com.termux/files/home/LulzSploit/tools/lsfconsole /data/data/com.termux/files/usr/bin/lsfconsole "
+Files     ="cp -r * /data/data/com.termux/files/home/LulzSploit /data/data/com.termux/files/usr/local/share/LulzSploit "
+Homedir   ="cd /data/data/com.termux/files/home
 
-print banner
-print ("\033[32m[ Installing... ]\n\033[0m")
-time.sleep(2.5)
-print ("\033[32m\n[ Unzipping Lulz Modules ]\033[0m\n")
-time.sleep(1.5)
-print "=" * 47
-print ""
-os.system("unzip tools.zip")
-print ""
-print "#" * 47
-time.sleep(2.5)
-print ("\033[32m\n[ Installing Lulz Requirements ]\n\033[0m")
-time.sleep(1.1)
-print "=" * 47
-print ""
-os.system("pip2 install -r lulz-requirements.txt")
-print ""
-print "#" * 47
-time.sleep(2.5)
-print ("\033[32m\n[ cleaning... ]\n\033[0m")
-time.sleep(1.1)
-os.system("chmod +x lulzsploit.py")
-os.system("rm -rf tools.zip")
-os.system("rm -rf lulz-requirements.txt")
-time.sleep(2.5)
-print ("\033[32m\n[ Done Installing ] : LulzSploit is ready to use\033[0m")
-print "\n"
-sys.exit()
+print '''
+{G}    .;'                      `;,    {G}[+]{N} Laughing At Your Security Since 2011
+{G}  .;'  ,;'               `;,  `;,    {Y}_          _      ____        _       _ _{G}
+{G} .;'  ,;'  ,;'   {Y}_{G}   `;,  `;,  `;,  {Y}| |   _   _| |____/ ___| _ __ | | ___ (_) |_{G}
+{G} ::   ::   :    {Y}(_){G}    :   ::   ::  {Y}| |  | | | | |_  /\___ \| '_ \| |/ _ \| | __|{G}
+{G} ':.  ':.  ':.  {Y}/_\{G}  ,;'  ,:'  ,:'  {Y}| |__| |_| | |/ /  ___) | |_) | | (_) | | |_{G}
+{G}  ':.  ':.     {Y}/___\{G}     ,:'  ,:'   {Y}|_____\__,_|_/___||____/| .__/|_|\___/|_|\__|{G}
+{G}    ':.       {Y}/_____\{G}        ,:'                            {Y}|_|
+               {Y}/       \{N}'''.format(Y = Y, G = G, N = N)
+print ("_________________________________________________
+print ("_________________________________________________| [esf installer]")
+print R + "  __________________________________________|" + W
+print R + " |  [+]" + G + " INSTALLING" + W
+print Command_exe(R + "|  [+]" + G + " Extracting Modules",'unzip tools.zip
+print Command_exe(R + "|  [+]" + G + " Creating Files\033[0m",'mkdir -p /data/data/com.termux/files/usr/share/LulzSploit')
+print Command_exe(R + "|  [+]" + G + " Copying Files\033[0m",'cp -r * /data/data/com.termux/files/usr/share/LulzSploit')
+print Command_exe(R + "|  [+]" + G + " Creating Shortcuts\033[0m",Shortcuts)
+print Command_exe(R + "|  [+]" + G + " Extracting Files\033[0m",Files)
+print Command_exe(R + "|  [+]" + G + " Giving Root Access\033[0m",'chmod -R -c 750 /usr/share/LulzSploit/')
+print R + "=" * 47 + W
+print R + " |  [+]" + O + " Done Installing!" + W
+print Command_exe(R + "|  [+]" + G + " Going back to home directory\033[0m",Homedir)
+print R + "[+]" + O + ": To run the program just type" + G + " lsfconsole" + W
+print("\n")

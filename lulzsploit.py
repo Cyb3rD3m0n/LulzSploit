@@ -48,7 +48,7 @@ except ImportError as e:
 
   print ("\n  {}[-]{} Modules Not Found{}".format(R,Y,N))
   time.sleep(2.5)
-  print ("  {}[-]{} Execute install.py to unzip and install all modules{}\n".format(R,Y,N))
+  print ("  {}[-]{} Execute setup.py to unzip and install all modules{}\n".format(R,Y,N))
   print ("  {}[-]{} LulzSploit Shutdown!{}".format(R,Y,N))
   sys.exit()
 

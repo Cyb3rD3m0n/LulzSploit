@@ -1,4 +1,4 @@
- LulzSploit : Execute install.py first to install module.
+ LulzSploit : Execute module-setup.py first to install module.
  
  
  

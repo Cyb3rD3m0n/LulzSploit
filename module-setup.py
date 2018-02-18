@@ -1,5 +1,16 @@
 import os, sys, time
 
+R = "\033[1;31m"   #  RED
+B = "\033[1;34m"   #  BLUE
+C = "\033[1;36m"   #  CYAN
+G = "\033[1;32m"   #  GREEN
+Y = "\033[1;93m"   #  YELLOW
+N = "\033[0m"      #  NORMAL
+B = "\033[1m"      #  BOLD
+P = "\033[35m"     #  PURPLE
+U = "\033[4m"      #  UNDERLINE
+O = "\033[36m"     #  ORANGE
+
 print '''
 {G}    .;'                      `;,    {G}[+]{N} Laughing At Your Security Since 2011
 {G}  .;'  ,;'               `;,  `;,    {Y}_          _      ____        _       _ _{G}

@@ -12,7 +12,7 @@ P = "\033[35m"     #  PURPLE
 U = "\033[4m"      #  UNDERLINE
 O = "\033[36m"     #  ORANGE
 
-def output_true(msg,input)
+def output_true(msg,input):
 
    i = "{} [status] : {}processing{}".format(G,Y,N)
 
@@ -29,6 +29,7 @@ def output_true(msg,input)
 
 
 script ="cp -r /data/data/com.termux/files/home/LulzSploit/tools/lsfconsole /data/data/com.termux/files/usr/bin"
+uninstall ="cp -r /data/data/com.termux/files/home/LulzSploit/termux-uninstall.py /data/data/com.termux/files/usr/share"
 folder ="cp -r /data/data/com.termux/files/home/LulzSploit /data/data/com.termux/files/usr/share"
 home ="cd /data/data/com.termux/files/home"
 clean ="rm -rf /data/data/com.termux/files/home/LulzSploit"
@@ -55,14 +56,17 @@ print '''
 
 '''.format(Y = Y, G = G, N = N)
 print "\033[1;31m[warning] \033[1;93mthis is important\033[0m"
-print "\033[1;93m[?] if module-setup.py is not executed you need to execute it now!")
-choice = raw_input("do you want to execute the module-setup.py [y/n]  : ")
+print "\033[1;93m[?] if module-setup.py is not executed you need to execute it now!"
+choice = raw_input("do you want to extract tools.zip [y/n]  : ")
+
 if choice == 'y' or choice == 'Y':
   print "=" * 47
   os.system("unzip tools.zip")
   print "=" * 47
 elif choice == 'n' or choice == 'N':
-  print "\033[1;31m[warning] \033[1;93mif you get an error you need to re-install or wait for updates\033[0m"
+  print "\n\033[1;31m[warning] \033[1;93mif you get an error you need to re-install or wait for updates\033[0m\n"
+
+
 print Y
 print "=" * 47
 print G + "\n[+] Installing\n" + N
@@ -70,6 +74,7 @@ print "=" * 47
 print ""
 print output_true(G +"[+] preparing to homedir   :",home)
 print output_true(G +"[+] installing shortcuts   :",script)
+print output_true(G +"[+] moving 1 file          :",uninstall)
 print output_true(G +"[+] moving folder          :",folder)
 print output_true(G +"[+] cleaning               :",clean)
 print ""

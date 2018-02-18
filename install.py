@@ -24,7 +24,7 @@ def Command_exe(msg,cmd):
 	stdout.write("\r " + msg +" STATUS:%s" % i)
 
 Shortcuts ="cp -r /data/data/com.termux/files/home/LulzSploit/tools/lsfconsole /data/data/com.termux/files/usr/bin/lsfconsole "
-Files     ="cp -r * /data/data/com.termux/files/home/LulzSploit /data/data/com.termux/files/usr/local/share/LulzSploit "
+Files     ="cp -r * /data/data/com.termux/files/home/LulzSploit /data/data/com.termux/files/usrp/local/share/LulzSploit "
 Homedir   ="cd /data/data/com.termux/files/home"
 
 print '''

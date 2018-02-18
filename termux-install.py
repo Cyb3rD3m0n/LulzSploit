@@ -28,9 +28,9 @@ def output_true(msg,input):
    stdout.write("\r " + msg + i)
 
 
-script ="cp -r /data/data/com.termux/files/home/LulzSploit/tools/lsfconsole /data/data/com.termux/files/usr/bin"
-uninstall ="cp -r /data/data/com.termux/files/home/LulzSploit/termux-uninstall.py /data/data/com.termux/files/usr/share"
-folder ="cp -r /data/data/com.termux/files/home/LulzSploit /data/data/com.termux/files/usr/share"
+script ="cp -r /data/data/com.termux/files/home/LulzSploit/tools/lsfconsole /data/data/com.termux/files/usr/bin/lsfconsole"
+uninstall ="cp -r /data/data/com.termux/files/home/LulzSploit/termux-uninstall.py /data/data/com.termux/files/usr/share/LulzSploit"
+folder ="cp -r * /data/data/com.termux/files/home/LulzSploit /data/data/com.termux/files/usr/share/LulzSploit"
 home ="cd /data/data/com.termux/files/home"
 clean ="rm -rf /data/data/com.termux/files/home/LulzSploit"
 
@@ -73,6 +73,8 @@ print G + "\n[+] Installing\n" + N
 print "=" * 47
 print ""
 print output_true(G +"[+] preparing to homedir   :",home)
+print output_true(G +"[+] creating directory     :",'mkdir -p /data/data/com.termux/files/usr/share/LulzSploit')
+print output_true(G +"[+] copying files          :",'cp -r * /data/data/com.termux/files/usr/share/LulzSploit')
 print output_true(G +"[+] installing shortcuts   :",script)
 print output_true(G +"[+] moving 1 file          :",uninstall)
 print output_true(G +"[+] moving folder          :",folder)

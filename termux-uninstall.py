@@ -1,5 +1,5 @@
 import os, time, subprocess
-from sys import stdout
+from sys import stdout, exit
 
 R = "\033[1;31m"   #  RED
 B = "\033[1;34m"   #  BLUE
@@ -34,15 +34,15 @@ home ="cd /data/data/com.termux/files/home"
 
 choice = raw_input("\033[1;32m[-]\033[1;93m are you sure do you want to uninstall LulzSploit? [y/N]\n\n  > ")
 if choice == 'n' or choice == 'N':
-  sys.exit()
+  exit()
 elif choice == 'y' or choice == 'Y':
   print output_true("preparing to home folder",home)
   print output_true("\033[1;31m[-]\033[0m uninstalling tool",folder)
   print output_true("\033[1;31m[-]\033[0m deleting shortcut",script)
   print "\n\033[1;32m[+]\033[0m you need to re-install the tool by git cloning it again"
-  sys.exit()
+  exit()
 else:
-  sys.exit()
+  exit()
 
 
 

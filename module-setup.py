@@ -21,7 +21,7 @@ print '''
 {G}    ':.       {Y}/_____\{G}        ,:'                            {Y}|_|
              {Y}/       \{N}
 
-{G}[+]{Y} LulzSploit Setup For Termux{N}
+{G}[+]{Y} LulzSploit Setup{N}
 {G}[+]{Y} LulzSploit v.3.5{N}
 
 

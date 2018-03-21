@@ -1,4 +1,3 @@
 colored
 requests
 python-whois
-urllib2

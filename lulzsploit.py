@@ -35,7 +35,7 @@ if str(platform.system()) != "Linux":
 subprocess.call('clear',shell=True)
 
 try:
-  from tools import colors, scanner, panel, cloudflare, DDoS, whs, gbrute, ftpb, Hinst, payloads, tortool
+  from tools import scanner, panel, cloudflare, DDoS, whs, gbrute, ftpb, Hinst, payloads, tortool
 except ImportError as e:
   time.sleep(1.5)
   print '''\033[1;93m

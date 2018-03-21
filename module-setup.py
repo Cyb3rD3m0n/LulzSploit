@@ -33,7 +33,7 @@ print "=" * 47
 os.system("pip2 install -r lulz-requirements.txt")
 os.system("chmod +x lulzsploit.py")
 os.system("rm -rf tools.zip")
-os.systen("rm -rf lulz-requirements.txt")
+os.system("rm -rf lulz-requirements.txt")
 print "=" * 47
 print ("\n\033[1;32m[+] \033[0mmodule-setup.py is done!\n")
 sys.exit()
